@@ -53,9 +53,9 @@ I provide complete source code, hosting setup assistance, and post-delivery supp
   image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&crop=center",
   seller: {
     id: "seller-1",
-    name: "Alex Chen",
+    name: "Aarav Sharma",
     avatar: null,
-    university: "MIT",
+    university: "IIT Bombay",
     verified: true,
     trustScore: 98,
     completedOrders: 45,
@@ -70,14 +70,14 @@ I provide complete source code, hosting setup assistance, and post-delivery supp
   reviews: [
     {
       id: "r1",
-      author: "John D.",
+      author: "Rahul K.",
       rating: 5,
-      comment: "Excellent work! Alex delivered exactly what I needed, on time and with great communication.",
+      comment: "Excellent work! Aarav delivered exactly what I needed, on time and with great communication.",
       date: "2 weeks ago",
     },
     {
       id: "r2",
-      author: "Maria S.",
+      author: "Priya S.",
       rating: 5,
       comment: "Very professional and skilled. The website exceeded my expectations.",
       date: "1 month ago",

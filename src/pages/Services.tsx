@@ -37,8 +37,8 @@ const mockServices = [
     reviewCount: 24,
     deliveryDays: 7,
     seller: {
-      name: "Alex Chen",
-      university: "MIT",
+      name: "Aarav Sharma",
+      university: "IIT Bombay",
     },
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center",
   },
@@ -52,8 +52,8 @@ const mockServices = [
     reviewCount: 18,
     deliveryDays: 3,
     seller: {
-      name: "Sarah Miller",
-      university: "RISD",
+      name: "Riya Patel",
+      university: "VIT Vellore",
     },
     image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop&crop=center",
   },
@@ -67,8 +67,8 @@ const mockServices = [
     reviewCount: 31,
     deliveryDays: 2,
     seller: {
-      name: "James Wilson",
-      university: "Columbia",
+      name: "Arjun Mehta",
+      university: "Delhi University",
     },
     image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&h=300&fit=crop&crop=center",
   },
@@ -82,8 +82,8 @@ const mockServices = [
     reviewCount: 15,
     deliveryDays: 5,
     seller: {
-      name: "Emily Davis",
-      university: "UCLA",
+      name: "Ananya Iyer",
+      university: "SRM Chennai",
     },
     image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop&crop=center",
   },
@@ -97,8 +97,8 @@ const mockServices = [
     reviewCount: 12,
     deliveryDays: 4,
     seller: {
-      name: "Michael Brown",
-      university: "Stanford",
+      name: "Karan Verma",
+      university: "IIT Delhi",
     },
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center",
   },
@@ -112,10 +112,70 @@ const mockServices = [
     reviewCount: 22,
     deliveryDays: 3,
     seller: {
-      name: "Lisa Johnson",
-      university: "NYU",
+      name: "Sneha Reddy",
+      university: "Jain University Bangalore",
     },
     image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center",
+  },
+  {
+    id: "7",
+    title: "Mobile App UI/UX Design",
+    category: "graphic-design",
+    categoryName: "Graphic Design",
+    price: 9500, // ₹9,500
+    rating: 4.8,
+    reviewCount: 19,
+    deliveryDays: 6,
+    seller: {
+      name: "Rahul Kulkarni",
+      university: "Mumbai University",
+    },
+    image: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=300&fit=crop&crop=center",
+  },
+  {
+    id: "8",
+    title: "Digital Marketing Campaign Setup",
+    category: "social-media",
+    categoryName: "Social Media",
+    price: 7500, // ₹7,500
+    rating: 4.5,
+    reviewCount: 28,
+    deliveryDays: 4,
+    seller: {
+      name: "Ishaan Kapoor",
+      university: "Pune University",
+    },
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center",
+  },
+  {
+    id: "9",
+    title: "Technical Documentation Writing",
+    category: "content-writing",
+    categoryName: "Content Writing",
+    price: 5500, // ₹5,500
+    rating: 4.7,
+    reviewCount: 16,
+    deliveryDays: 3,
+    seller: {
+      name: "Neha Joshi",
+      university: "BITS Pilani",
+    },
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=500&h=300&fit=crop&crop=center",
+  },
+  {
+    id: "10",
+    title: "Machine Learning Model Development",
+    category: "data-analysis",
+    categoryName: "Data Analysis",
+    price: 15000, // ₹15,000
+    rating: 4.9,
+    reviewCount: 8,
+    deliveryDays: 10,
+    seller: {
+      name: "Aditya Nair",
+      university: "IIT Madras",
+    },
+    image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=500&h=300&fit=crop&crop=center",
   },
 ];
 

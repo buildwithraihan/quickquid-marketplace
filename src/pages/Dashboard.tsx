@@ -23,8 +23,8 @@ const mockOrders = [
   {
     id: "ORD-001",
     service: "Professional Website Development",
-    seller: "Alex Chen",
-    buyer: "John Doe",
+    seller: "Aarav Sharma",
+    buyer: "Rohit Gupta",
     status: "in_progress",
     price: 12500, // ₹12,500 (converted from $150)
     date: "2025-02-01",
@@ -32,8 +32,8 @@ const mockOrders = [
   {
     id: "ORD-002",
     service: "Logo Design",
-    seller: "Sarah Miller",
-    buyer: "John Doe",
+    seller: "Riya Patel",
+    buyer: "Rohit Gupta",
     status: "completed",
     price: 6250, // ₹6,250 (converted from $75)
     date: "2025-01-28",

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <rect width="800" height="450" fill="#1a1a2e"/>
+  
+  <!-- Background pattern -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#16213e" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#grid)"/>
+  
+  <!-- QuickQUID logo -->
+  <g transform="translate(350, 180)">
+    <!-- Interlocked Q's -->
+    <path d="M20 30 C20 15, 30 5, 50 5 C70 5, 80 15, 80 30 L80 60 C80 75, 70 85, 50 85 L45 85 L65 105 L50 105 L30 85 C20 75, 20 60, 20 60 Z M35 30 C35 25, 40 20, 50 20 C60 20, 65 25, 65 30 L65 60 C65 65, 60 70, 50 70 C40 70, 35 65, 35 60 Z" fill="#4f46e5" opacity="0.8"/>
+    
+    <path d="M40 50 C40 35, 50 25, 70 25 C90 25, 100 35, 100 50 L100 80 C100 95, 90 105, 70 105 L65 105 L85 125 L70 125 L50 105 C40 95, 40 80, 40 80 Z M55 50 C55 45, 60 40, 70 40 C80 40, 85 45, 85 50 L85 80 C85 85, 80 90, 70 90 C60 90, 55 85, 55 80 Z" fill="#4f46e5" opacity="0.6"/>
+  </g>
+  
+  <!-- Service Preview text -->
+  <text x="400" y="280" font-family="Arial, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#6b7280">Service Preview</text>
+  <text x="400" y="310" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" fill="#4b5563">Professional services by verified students</text>
+</svg>

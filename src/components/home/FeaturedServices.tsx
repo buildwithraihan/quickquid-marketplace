@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Star, Clock, ArrowRight } from "lucide-react";
+import { ServiceImage } from "@/components/ServiceImage";
+import { formatCurrency } from "@/lib/currency";
 
 // Mock data - will be replaced with real data from Supabase
 const featuredServices = [
@@ -8,7 +10,7 @@ const featuredServices = [
     id: "1",
     title: "Professional Website Development",
     category: "Web Development",
-    price: 150,
+    price: 12500, // ₹12,500 (converted from $150)
     rating: 4.9,
     reviewCount: 24,
     deliveryDays: 7,
@@ -18,13 +20,13 @@ const featuredServices = [
       university: "MIT",
       verified: true,
     },
-    image: null,
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "2",
     title: "Modern Logo & Brand Identity Design",
     category: "Graphic Design",
-    price: 75,
+    price: 6250, // ₹6,250 (converted from $75)
     rating: 5.0,
     reviewCount: 18,
     deliveryDays: 3,
@@ -34,13 +36,13 @@ const featuredServices = [
       university: "RISD",
       verified: true,
     },
-    image: null,
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "3",
     title: "SEO-Optimized Blog Content Writing",
     category: "Content Writing",
-    price: 50,
+    price: 4200, // ₹4,200 (converted from $50)
     rating: 4.8,
     reviewCount: 31,
     deliveryDays: 2,
@@ -50,7 +52,7 @@ const featuredServices = [
       university: "Columbia",
       verified: true,
     },
-    image: null,
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&h=300&fit=crop&crop=center",
   },
 ];
 
@@ -85,12 +87,12 @@ const FeaturedServices = () => {
               className="group glass-card overflow-hidden rounded-xl transition-all duration-300 hover:border-primary/50 hover:shadow-lg animate-fade-in opacity-0"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              {/* Service Image Placeholder */}
-              <div className="aspect-video bg-secondary/50">
-                <div className="flex h-full items-center justify-center text-muted-foreground">
-                  <span className="text-sm">Service Preview</span>
-                </div>
-              </div>
+              {/* Service Image */}
+              <ServiceImage
+                src={service.image}
+                alt={service.title}
+                className="rounded-t-xl"
+              />
 
               <div className="p-5">
                 {/* Category */}
@@ -128,7 +130,7 @@ const FeaturedServices = () => {
                     </div>
                   </div>
                   <p className="font-display text-lg font-bold text-foreground">
-                    ${service.price}
+                    {formatCurrency(service.price)}
                   </p>
                 </div>
               </div>

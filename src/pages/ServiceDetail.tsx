@@ -26,6 +26,8 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 import { useAuth } from "@/hooks/useAuth";
+import { ServiceImage } from "@/components/ServiceImage";
+import { formatCurrency } from "@/lib/currency";
 
 // Mock data - will be replaced with real data from Supabase
 const mockService = {
@@ -43,11 +45,12 @@ Technologies I use: React, Next.js, Tailwind CSS, TypeScript, Node.js
 
 I provide complete source code, hosting setup assistance, and post-delivery support.`,
   category: "Web Development",
-  price: 150,
+  price: 12500, // ₹12,500 (converted from $150)
   rating: 4.9,
   reviewCount: 24,
   deliveryDays: 7,
   revisions: 3,
+  image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=450&fit=crop&crop=center",
   seller: {
     id: "seller-1",
     name: "Alex Chen",
@@ -135,11 +138,11 @@ const ServiceDetail = () => {
               {/* Main Content */}
               <div className="lg:col-span-2">
                 {/* Service Image */}
-                <div className="mb-6 aspect-video overflow-hidden rounded-xl bg-secondary/50">
-                  <div className="flex h-full items-center justify-center text-muted-foreground">
-                    <span>Service Preview</span>
-                  </div>
-                </div>
+                <ServiceImage
+                  src={mockService.image}
+                  alt={mockService.title}
+                  className="mb-6 rounded-xl"
+                />
 
                 {/* Title & Category */}
                 <Badge className="mb-3 bg-primary/10 text-primary hover:bg-primary/20">
@@ -235,7 +238,7 @@ const ServiceDetail = () => {
                   <div className="glass-card rounded-xl p-6">
                     <div className="mb-4 flex items-baseline justify-between">
                       <span className="font-display text-3xl font-bold text-foreground">
-                        ${mockService.price}
+                        {formatCurrency(mockService.price)}
                       </span>
                       <span className="text-muted-foreground">starting price</span>
                     </div>
@@ -282,11 +285,11 @@ const ServiceDetail = () => {
                             />
                           </div>
                           <div className="space-y-2">
-                            <Label htmlFor="budget">Your Budget ($)</Label>
+                            <Label htmlFor="budget">Your Budget (₹)</Label>
                             <Input
                               id="budget"
                               type="number"
-                              placeholder="150"
+                              placeholder="12500"
                               value={budget}
                               onChange={(e) => setBudget(e.target.value)}
                               required

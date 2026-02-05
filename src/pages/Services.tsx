@@ -12,6 +12,8 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Search, Star, Clock, Filter, X } from "lucide-react";
+import { ServiceImage } from "@/components/ServiceImage";
+import { formatCurrency } from "@/lib/currency";
 
 const categories = [
   { id: "all", name: "All Categories" },
@@ -30,7 +32,7 @@ const mockServices = [
     title: "Professional Website Development",
     category: "web-development",
     categoryName: "Web Development",
-    price: 150,
+    price: 12500, // ₹12,500 (converted from $150)
     rating: 4.9,
     reviewCount: 24,
     deliveryDays: 7,
@@ -38,13 +40,14 @@ const mockServices = [
       name: "Alex Chen",
       university: "MIT",
     },
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "2",
     title: "Modern Logo & Brand Identity Design",
     category: "graphic-design",
     categoryName: "Graphic Design",
-    price: 75,
+    price: 6250, // ₹6,250 (converted from $75)
     rating: 5.0,
     reviewCount: 18,
     deliveryDays: 3,
@@ -52,13 +55,14 @@ const mockServices = [
       name: "Sarah Miller",
       university: "RISD",
     },
+    image: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "3",
     title: "SEO-Optimized Blog Content Writing",
     category: "content-writing",
     categoryName: "Content Writing",
-    price: 50,
+    price: 4200, // ₹4,200 (converted from $50)
     rating: 4.8,
     reviewCount: 31,
     deliveryDays: 2,
@@ -66,13 +70,14 @@ const mockServices = [
       name: "James Wilson",
       university: "Columbia",
     },
+    image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "4",
     title: "Professional Video Editing for YouTube",
     category: "video-editing",
     categoryName: "Video Editing",
-    price: 100,
+    price: 8300, // ₹8,300 (converted from $100)
     rating: 4.7,
     reviewCount: 15,
     deliveryDays: 5,
@@ -80,13 +85,14 @@ const mockServices = [
       name: "Emily Davis",
       university: "UCLA",
     },
+    image: "https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "5",
     title: "Data Analysis & Visualization with Python",
     category: "data-analysis",
     categoryName: "Data Analysis",
-    price: 120,
+    price: 10000, // ₹10,000 (converted from $120)
     rating: 4.9,
     reviewCount: 12,
     deliveryDays: 4,
@@ -94,13 +100,14 @@ const mockServices = [
       name: "Michael Brown",
       university: "Stanford",
     },
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&h=300&fit=crop&crop=center",
   },
   {
     id: "6",
     title: "Social Media Strategy & Content Creation",
     category: "social-media",
     categoryName: "Social Media",
-    price: 80,
+    price: 6650, // ₹6,650 (converted from $80)
     rating: 4.6,
     reviewCount: 22,
     deliveryDays: 3,
@@ -108,6 +115,7 @@ const mockServices = [
       name: "Lisa Johnson",
       university: "NYU",
     },
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=500&h=300&fit=crop&crop=center",
   },
 ];
 
@@ -262,12 +270,12 @@ const Services = () => {
                     className="group glass-card overflow-hidden rounded-xl transition-all duration-300 hover:border-primary/50 hover:shadow-lg animate-fade-in opacity-0"
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
-                    {/* Service Image Placeholder */}
-                    <div className="aspect-video bg-secondary/50">
-                      <div className="flex h-full items-center justify-center text-muted-foreground">
-                        <span className="text-sm">Service Preview</span>
-                      </div>
-                    </div>
+                    {/* Service Image */}
+                    <ServiceImage
+                      src={service.image}
+                      alt={service.title}
+                      className="rounded-t-xl"
+                    />
 
                     <div className="p-5">
                       {/* Category */}
@@ -311,7 +319,7 @@ const Services = () => {
                           </div>
                         </div>
                         <p className="font-display text-lg font-bold text-foreground">
-                          ${service.price}
+                          {formatCurrency(service.price)}
                         </p>
                       </div>
                     </div>

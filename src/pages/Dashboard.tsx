@@ -16,6 +16,7 @@ import {
   CheckCircle,
 } from "lucide-react";
 import { useAuth } from "@/hooks/useAuth";
+import { formatCurrency } from "@/lib/currency";
 
 // Mock data
 const mockOrders = [
@@ -25,7 +26,7 @@ const mockOrders = [
     seller: "Alex Chen",
     buyer: "John Doe",
     status: "in_progress",
-    price: 150,
+    price: 12500, // ₹12,500 (converted from $150)
     date: "2025-02-01",
   },
   {
@@ -34,7 +35,7 @@ const mockOrders = [
     seller: "Sarah Miller",
     buyer: "John Doe",
     status: "completed",
-    price: 75,
+    price: 6250, // ₹6,250 (converted from $75)
     date: "2025-01-28",
   },
 ];
@@ -218,7 +219,7 @@ const Dashboard = () => {
                         </div>
                         <div className="text-right">
                           <p className="font-display text-lg font-bold text-foreground">
-                            ${order.price}
+                            {formatCurrency(order.price)}
                           </p>
                           <p className="text-sm text-muted-foreground">{order.date}</p>
                         </div>

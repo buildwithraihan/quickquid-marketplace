@@ -19,6 +19,8 @@ import CreateService from "./pages/seller/CreateService";
 import HireRequests from "./pages/seller/HireRequests";
 import SellerOrders from "./pages/seller/SellerOrders";
 import SellerProfile from "./pages/seller/SellerProfile";
+// Gig Pages
+import CreateGig from "./pages/gigs/CreateGig";
 
 const queryClient = new QueryClient();
 
@@ -46,6 +48,9 @@ const App = () => (
             <Route path="/seller/requests" element={<HireRequests />} />
             <Route path="/seller/orders" element={<SellerOrders />} />
             <Route path="/seller/profile" element={<SellerProfile />} />
+            
+            {/* Gig Routes */}
+            <Route path="/gigs/create" element={<CreateGig />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
